@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KeepCount — Focus Timer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">KeepCount</div>
+    <div class="topinfo" id="topInfo">💰 0 Coins | 🔥 0-Day Streak</div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Tambah Tugas</h2>
+      <div class="form-row">
+        <input id="taskTitle" type="text" placeholder="Nama tugas (mis. Belajar JS)" />
+      </div>
+
+      <div class="form-row">
+        <label for="modeSelect">Mode</label>
+        <select id="modeSelect">
+          <option value="deadline">Deadline (tanggal & waktu)</option>
+          <option value="timer">Timer saja (durasi menit)</option>
+        </select>
+      </div>
+
+      <div class="form-row" id="deadlineRow">
+        <label for="taskDeadline">Pilih tanggal & waktu</label>
+        <input id="taskDeadline" type="datetime-local" />
+      </div>
+
+      <div class="form-row" id="durationRow" style="display:none;">
+        <label for="taskDuration">Durasi (menit)</label>
+        <input id="taskDuration" type="number" min="1" placeholder="Contoh: 25" />
+      </div>
+
+      <div class="form-row">
+        <button id="addBtn" class="btn primary">Tambah Tugas</button>
+        <button id="clearBtn" cl
